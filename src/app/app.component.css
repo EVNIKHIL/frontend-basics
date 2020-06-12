@@ -1,1 +1,7 @@
-/* No CSS *//*# sourceMappingURL=app.component.css.map */
+/* Set a background image by replacing the URL below */
+body {
+  background: url("/assets/reachout-login-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -o-background-size: cover;
+}
+/*# sourceMappingURL=app.component.css.map */
