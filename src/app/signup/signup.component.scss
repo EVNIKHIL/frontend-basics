@@ -3,7 +3,9 @@
 $sign-up-padding320 : 40px;
 $sign-up-padding768 : 40px;
 $sign-up-padding992 : 40px;
-$sign-up-padding1200: 40px;
+$sign-up-padding1200: 32px;
+
+$navbar-logo-height : 32px;
 
 $theme-color : #34b2ed;
 $font-color: #FFF;
@@ -17,12 +19,16 @@ $font-color: #FFF;
 
 .container-up {
     background-image: url("/assets/reachout-login-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     display: block;
+    min-height: 500px;
+    padding-top: 1px;
 }
 
 @media (min-width: 320px) {
     .navbar-logo {
-        height: 32px;
+        height: $navbar-logo-height;
     }
     .signup-form {
         padding: $sign-up-padding320;
@@ -34,7 +40,7 @@ $font-color: #FFF;
 }
 @media (min-width: 768px) {
     .navbar-logo {
-        height: 32px;
+        height: $navbar-logo-height;
     }
     .signup-form {
         padding: $sign-up-padding768;
@@ -42,7 +48,7 @@ $font-color: #FFF;
 }
 @media (min-width: 992px) {
     .navbar-logo {
-        height: 32px;
+        height: $navbar-logo-height;
     }
 
     .signup-form {
@@ -51,7 +57,7 @@ $font-color: #FFF;
 }
 @media (min-width: 1200px) {
     .navbar-logo {
-        height: 40px;
+        height: $navbar-logo-height;
     }
 
     .signup-form {
