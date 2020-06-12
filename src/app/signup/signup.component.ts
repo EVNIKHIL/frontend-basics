@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
+  logoUrl: string = 'assets/reachout-logo.png';
   constructor() { }
 
   ngOnInit(): void {
