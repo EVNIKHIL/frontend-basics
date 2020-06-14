@@ -152,3 +152,11 @@ ul.feature-list {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+
+input.has-error {
+    border: 1px solid red;
+}
+
+span.checkmark.has-error {
+    border: 1px solid red;
+}
