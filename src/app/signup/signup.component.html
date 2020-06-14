@@ -1,75 +1,73 @@
-<!-- Navigation -->
-<nav class="navbar">
-    <div class="container-fluid">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+    <div class="container navbar-container">
         <img class="navbar-logo" [src]="logoUrl" alt="">
     </div>
-</nav>
+  </nav>
   
   <!-- Page Content -->
-  <div class="container-up">
-    <div class="container">
-    <div class="card border-0 shadow my-5">
-        <div class="row signup-form">
-            <div class="col-sm-5 sign-up-message">
-                <h3>
-                Free Sign-up to Get
-                Everything to Start with !
-                </h3>
-                <ul class="feature-list">
-                    <li>All Modules</li>
-                    <hr>
-                    <li>3 Users & 3GB Free Forever</li>
-                    <hr>
-                    <li>No credit card is required to sign up.</li>
-                </ul>
-                <p>
-                Need more users? When you are ready, add them from inside the web application. Payments are handled there directly by a secure payment gateway and no credit card details are ever stored by ReachOut.
-                </p>
-            </div>
-            <div class="col-sm-7">
-            <form #regForm="ngForm" (ngSubmit)="onSubmit(regForm)" >
+  <div class="container page-container">
+      <div class="my-5 card border-0 shadow">
+            <div class="row reg-form-card">
+                <div class="col-md-5">
+                    <h3>
+                        Free Sign-up to Get
+                        Everything to Start with !
+                        </h3>
+                        <ul class="feature-list">
+                            <li>All Modules</li>
+                            <hr>
+                            <li>3 Users & 3GB Free Forever</li>
+                            <hr>
+                            <li>No credit card is required to sign up.</li>
+                        </ul>
+                        <p>
+                        Need more users? When you are ready, add them from inside the web application. Payments are handled there directly by a secure payment gateway and no credit card details are ever stored by ReachOut.
+                        </p>
+                </div>
+                <div class="reg-form-col col-md-7">
+                    <form #regForm="ngForm" (ngSubmit)="onSubmit(regForm)" >
                 
-                <div class="row form-group">
-                    <div class="col-sm-6">
-                        <input type="text" name="firstName" class="form-control" [ngClass]="{'has-error': regForm.submitted && regForm.controls.firstName.invalid }"  placeholder="First Name" required ngModel>
-                    </div>
-                    <div class="col-sm-6 form-second">
-                        <input type="text" name="lastName" class="form-control" placeholder="Last Name" ngModel>
-                    </div>
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <input type="text" name="firstName" class="form-control" [ngClass]="{'has-error': regForm.submitted && regForm.controls.firstName.invalid }"  placeholder="First Name" required ngModel>
+                            </div>
+
+                            <div class="col-md-6">
+                                <input type="text" name="lastName" class="form-control" placeholder="Last Name" ngModel>
+                            </div>
+                        </div>
+        
+                        <div class="form-group">
+                            <input type="email" name="emailId" class="form-control" [ngClass]="{'has-error': regForm.submitted && regForm.controls.emailId.invalid }" placeholder="Email ID" email required ngModel>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" name="companyName" class="form-control" [ngClass]="{'has-error': regForm.submitted && regForm.controls.companyName.invalid }" placeholder="Company Name" required ngModel>
+                        </div>
+        
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <input type="password" name="password" class="form-control" [ngClass]="{'has-error': regForm.submitted && regForm.controls.password.invalid }" placeholder="Password" required ngModel>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="password" name="confirmPassword" class="form-control" [ngClass]="{'has-error': regForm.submitted && (regForm.controls.confirmPassword.invalid || regForm.value.password !=  regForm.value.confirmPassword )}" placeholder="Confirm Password" required ngModel>
+                            </div>
+                        </div>
+        
+                        <div class="form-group">
+                            <input type="text" name="phoneNumber" class="form-control" [ngClass]="{'has-error': regForm.submitted && regForm.controls.phoneNumber.invalid }" placeholder="Phone Number" number required ngModel>
+                        </div>
+        
+                        <label class="checkbox-container">I agree with the <a href="https://www.reachoutsuite.com/terms-and-conditions/">terms of service</a>
+                            <input type="checkbox" name="terms" checked="checked" ngModel>
+                            <span class="checkmark" [ngClass]="{'has-error': regForm.submitted && regForm.value.terms !== true }" ></span>
+                        </label>
+        
+                        <button type="submit" class="btn btn-theme-color btn-md btn-block">Sign up</button>
+        
+                    </form>
                 </div>
-
-                <div class="form-group">
-                    <input type="email" name="emailId" class="form-control" [ngClass]="{'has-error': regForm.submitted && regForm.controls.emailId.invalid }" placeholder="Email ID" email required ngModel>
-                </div>
-                
-                <div class="form-group">
-                    <input type="text" name="companyName" class="form-control" [ngClass]="{'has-error': regForm.submitted && regForm.controls.companyName.invalid }" placeholder="Company Name" required ngModel>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-sm-6">
-                        <input type="password" name="password" class="form-control" [ngClass]="{'has-error': regForm.submitted && regForm.controls.password.invalid }" placeholder="Password" required ngModel>
-                    </div>
-                    <div class="col-sm-6 form-second">
-                        <input type="password" name="confirmPassword" class="form-control" [ngClass]="{'has-error': regForm.submitted && (regForm.controls.confirmPassword.invalid || regForm.value.password !=  regForm.value.confirmPassword )}" placeholder="Confirm Password" required ngModel>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <input type="text" name="phoneNumber" class="form-control" [ngClass]="{'has-error': regForm.submitted && regForm.controls.phoneNumber.invalid }" placeholder="Phone Number" number required ngModel>
-                </div>
-
-                <label class="checkbox-container">I agree with the <a href="https://www.reachoutsuite.com/terms-and-conditions/">terms of service</a>
-                    <input type="checkbox" name="terms" checked="checked" ngModel>
-                    <span class="checkmark" [ngClass]="{'has-error': regForm.submitted && regForm.value.terms !== true }" ></span>
-                </label>
-
-                <button type="submit" class="btn btn-theme-color btn-md btn-block">Sign up</button>
-
-            </form>
             </div>
-        </div>
-
-    </div>
-    </div>
+      </div>
   </div>
