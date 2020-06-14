@@ -7,15 +7,21 @@ $font-color: #FFF;
     max-width: 1000px;
 }
 
+@media (max-width :768px) {
+    .row.form-group .col-md-6:nth-child(2) {
+        margin-top: 15px;
+    }
+}
 @media (min-width: 320px) {
     .reg-form-card {
         padding: 30px;
     }
+
 }
 @media (min-width: 678px) {
     .reg-form-card {
         padding: 50px;
-    }
+    }    
 }
 
 
@@ -59,7 +65,7 @@ ul.feature-list {
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 13px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -78,7 +84,6 @@ ul.feature-list {
   /* Create a custom checkbox */
   .checkmark {
     position: absolute;
-    top: 8px;
     left: 0;
     height: 20px;
     width: 20px;
@@ -119,6 +124,14 @@ ul.feature-list {
       margin-top: 40px;
   }
 
-  .row.form-group .col-md-6:nth-child(2) {
-      margin-top: 15px;
+  
+
+  .feature-list {
+      margin-top: 40px;
+      font-size: 13px;
+      color: #535353;
+  }
+
+  .sign-up-message {
+      color: #606060;
   }
