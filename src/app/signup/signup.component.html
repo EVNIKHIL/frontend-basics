@@ -11,7 +11,7 @@
             <div class="row reg-form-card">
                 <div class="col-md-5">
                         <h3 class="sign-up-message">
-                        Free Sign-up to Get
+                        Free Sign-up to Get <br />
                         Everything to Start with !
                         </h3>
                         <ul class="feature-list">
@@ -21,7 +21,7 @@
                             <hr>
                             <li>No credit card is required to sign up.</li>
                         </ul>
-                        <p>
+                        <p class="join-message">
                         Need more users? When you are ready, add them from inside the web application. Payments are handled there directly by a secure payment gateway and no credit card details are ever stored by ReachOut.
                         </p>
                 </div>
@@ -40,6 +40,7 @@
         
                         <div class="form-group">
                             <input type="email" name="emailId" class="form-control" [ngClass]="{'has-error': regForm.submitted && regForm.controls.emailId.invalid }" placeholder="Email ID" email required ngModel>
+                            <small *ngIf="regForm.submitted && regForm.controls.emailId.errors?.email" class="text-danger">Invalid email</small> 
                         </div>
                         
                         <div class="form-group">
@@ -52,11 +53,13 @@
                             </div>
                             <div class="col-md-6">
                                 <input type="password" name="confirmPassword" class="form-control" [ngClass]="{'has-error': regForm.submitted && (regForm.controls.confirmPassword.invalid || regForm.value.password !=  regForm.value.confirmPassword )}" placeholder="Confirm Password" required ngModel>
+                                <small *ngIf="regForm.submitted && regForm.value.password !=  regForm.value.confirmPassword" class="text-danger">Password mismatch</small> 
                             </div>
                         </div>
         
                         <div class="form-group">
-                            <input type="text" name="phoneNumber" class="form-control" [ngClass]="{'has-error': regForm.submitted && regForm.controls.phoneNumber.invalid }" placeholder="Phone Number" number required ngModel>
+                            <input type="text" name="phoneNumber" class="form-control" [pattern]="mobNumberPattern" [ngClass]="{'has-error': regForm.submitted && regForm.controls.phoneNumber.invalid }" placeholder="Phone Number" number required ngModel>
+                            <small *ngIf="regForm.submitted && regForm.controls.phoneNumber.errors?.pattern" class="text-danger">Invalid phone number</small> 
                         </div>
         
                         <label class="checkbox-container">I agree with the <a href="https://www.reachoutsuite.com/terms-and-conditions/">terms of service</a>

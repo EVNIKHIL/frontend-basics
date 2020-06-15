@@ -7,6 +7,13 @@ $font-color: #FFF;
     max-width: 1000px;
 }
 
+@media (max-width :320px) {
+    .reg-form-card {
+        padding: 15px;
+    }
+
+}
+
 @media (max-width :768px) {
     .row.form-group .col-md-6:nth-child(2) {
         margin-top: 15px;
@@ -36,6 +43,7 @@ $font-color: #FFF;
 
 .navbar-container {
     margin: 0;
+    height: 60px;
 }
 
 input.has-error {
@@ -134,4 +142,9 @@ ul.feature-list {
 
   .sign-up-message {
       color: #606060;
+  }
+
+  .join-message{
+    font-size: 13px;
+    color: #8F8F8F;
   }
