@@ -37,9 +37,15 @@ $font-color : #8F8F8F;
         color: $theme-color;
     }
 
+    input.ng-invalid.ng-touched {
+        border: 1px solid red;
+    }
+
     @media (min-width: 320px) { 
         .navbar-logo {
             width: 130px;
         }
     }
+
+
 }
