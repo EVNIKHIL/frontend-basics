@@ -7,8 +7,8 @@ import { NgForm } from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
 
-  logoUrl: string   = 'assets/reachout-logo.png';
-  mobNumberPattern  = "^((\\+91-?)|0)?[0-9]{10}$";  
+  logoUrl           = 'assets/reachout-logo.png';
+  mobNumberPattern  = '^((\\+91-?)|0)?[0-9]{10}$';
   constructor() { }
 
   ngOnInit(): void {
