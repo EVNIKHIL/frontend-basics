@@ -43,9 +43,17 @@ $font-color : #8F8F8F;
 
     @media (min-width: 320px) { 
         .navbar-logo {
-            width: 130px;
+            width: 110px;
         }
     }
+    
+    @media (min-width: 678px) { 
+        .col-sm-6 {
+            padding: 35px;
+        }
+    }
+
+
 
 
 }
