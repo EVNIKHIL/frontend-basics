@@ -1,4 +1,5 @@
 $theme-color : #34b2ed;
+$font-color : #8F8F8F;
 
 .login-form {
 
@@ -15,15 +16,20 @@ $theme-color : #34b2ed;
     }
 
     .navbar-logo {
-        height: 42px;
+        height: 45px;
+        cursor: pointer;
     }
 
     .grey-color {
-        color: #606060;
+        color: $font-color;
     }
 
     .font-size-13 {
         font-size: 13px
+    }
+
+    .font-color-grey {
+        color: $font-color;
     }
 
     .theme-color {
