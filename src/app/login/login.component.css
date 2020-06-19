@@ -1,0 +1,50 @@
+.login-form .btn-theme-color {
+  background-color: #34b2ed;
+}
+
+.login-form .reachout-logo {
+  height: 32px;
+}
+
+.login-form .mobile-app-icons {
+  height: 40px;
+}
+
+.login-form .navbar-logo {
+  height: 45px;
+  width: 110px;
+  cursor: pointer;
+}
+
+.login-form .grey-color {
+  color: #8F8F8F;
+}
+
+.login-form .font-size-13 {
+  font-size: 13px;
+}
+
+.login-form .font-color-grey {
+  color: #8F8F8F;
+}
+
+.login-form .theme-color {
+  color: #34b2ed;
+}
+
+.login-form input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+@media (min-width: 320px) {
+  .login-form .navbar-logo {
+    width: 110px;
+  }
+}
+
+@media (min-width: 678px) {
+  .login-form .col-sm-6 {
+    padding: 35px;
+  }
+}
+/*# sourceMappingURL=login.component.css.map */

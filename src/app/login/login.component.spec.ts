@@ -1,4 +1,4 @@
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoginComponent } from './login.component';
@@ -9,7 +9,7 @@ describe('LoginComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ FormsModule ],
+      imports: [ ReactiveFormsModule, FormsModule ],
       declarations: [ LoginComponent ]
     })
     .compileComponents();
@@ -24,4 +24,10 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('component initial state', () => {
+    console.log(component);
+    expect(true).toBeFalsy();
+  });
+
 });

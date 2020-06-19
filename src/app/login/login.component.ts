@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   appleLogo     = 'assets/app_store.png';
   googleLogo    = 'assets/google_play.png';
   mobNumberPattern  = '^((\\+91-?)|0)?[0-9]{10}$';
+  loginForm: NgForm;
   constructor() { }
 
   ngOnInit(): void {

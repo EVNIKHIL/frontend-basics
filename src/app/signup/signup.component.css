@@ -142,4 +142,8 @@ ul.feature-list li::before {
   font-size: 13px;
   color: #8F8F8F;
 }
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
 /*# sourceMappingURL=signup.component.css.map */
