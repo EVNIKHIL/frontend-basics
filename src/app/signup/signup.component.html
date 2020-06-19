@@ -30,7 +30,7 @@
                 
                         <div class="row form-group">
                             <div class="col-md-6">
-                                <input type="text" name="firstName" class="form-control" [ngClass]="{'has-error': regForm.submitted && regForm.controls.firstName.invalid }"  placeholder="First Name" required ngModel>
+                                <input type="text" name="firstName" class="form-control" placeholder="First Name" required ngModel>
                             </div>
 
                             <div class="col-md-6">
@@ -39,35 +39,35 @@
                         </div>
         
                         <div class="form-group">
-                            <input type="email" name="emailId" class="form-control" [ngClass]="{'has-error': regForm.submitted && regForm.controls.emailId.invalid }" placeholder="Email ID" email required ngModel>
-                            <small *ngIf="regForm.submitted && regForm.controls.emailId.errors?.email" class="text-danger">Invalid email</small> 
+                            <input type="email" name="emailId" class="form-control" placeholder="Email ID" email required ngModel>
+                            <small *ngIf="regForm.controls.emailId.errors?.email" class="text-danger">Invalid email</small> 
                         </div>
                         
                         <div class="form-group">
-                            <input type="text" name="companyName" class="form-control" [ngClass]="{'has-error': regForm.submitted && regForm.controls.companyName.invalid }" placeholder="Company Name" required ngModel>
+                            <input type="text" name="companyName" class="form-control" placeholder="Company Name" required ngModel>
                         </div>
         
                         <div class="row form-group">
                             <div class="col-md-6">
-                                <input type="password" name="password" class="form-control" [ngClass]="{'has-error': regForm.submitted && regForm.controls.password.invalid }" placeholder="Password" required ngModel>
+                                <input type="password" name="password" class="form-control" placeholder="Password" required ngModel>
                             </div>
                             <div class="col-md-6">
-                                <input type="password" name="confirmPassword" class="form-control" [ngClass]="{'has-error': regForm.submitted && (regForm.controls.confirmPassword.invalid || regForm.value.password !=  regForm.value.confirmPassword )}" placeholder="Confirm Password" required ngModel>
-                                <small *ngIf="regForm.submitted && regForm.value.password !=  regForm.value.confirmPassword" class="text-danger">Password mismatch</small> 
+                                <input type="password" name="confirmPassword" class="form-control" placeholder="Confirm Password" required ngModel>
+                                <small *ngIf="regForm.value.password !=  regForm.value.confirmPassword" class="text-danger">Password mismatch</small> 
                             </div>
                         </div>
         
                         <div class="form-group">
-                            <input type="text" name="phoneNumber" class="form-control" [pattern]="mobNumberPattern" [ngClass]="{'has-error': regForm.submitted && regForm.controls.phoneNumber.invalid }" placeholder="Phone Number" number required ngModel>
+                            <input type="text" name="phoneNumber" class="form-control" [pattern]="mobNumberPattern" placeholder="Phone Number" number required ngModel>
                             <small *ngIf="regForm.submitted && regForm.controls.phoneNumber.errors?.pattern" class="text-danger">Invalid phone number</small> 
                         </div>
         
                         <label class="checkbox-container">I agree with the <a href="https://www.reachoutsuite.com/terms-and-conditions/">terms of service</a>
                             <input type="checkbox" name="terms" checked="checked" ngModel>
-                            <span class="checkmark" [ngClass]="{'has-error': regForm.submitted && regForm.value.terms !== true }" ></span>
+                            <span class="checkmark"></span>
                         </label>
         
-                        <button type="submit" class="btn btn-theme-color btn-md btn-block">Sign up</button>
+                        <button type="submit" [disabled]="regForm.invalid" class="btn btn-theme-color btn-md btn-block">Sign up</button>
         
                     </form>
                 </div>

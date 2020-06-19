@@ -148,3 +148,7 @@ ul.feature-list {
     font-size: 13px;
     color: #8F8F8F;
   }
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
