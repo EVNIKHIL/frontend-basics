@@ -3,16 +3,31 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoginComponent } from './login.component';
 
+export const blankUser = {
+  email: '',
+  password: '',
+};
+
+export const validUser = {
+  email : 'evnikhil@gmail.com',
+  password : '123456'
+};
+
+export const invalidUser = {
+  email : 'evnikhilgmail.com',
+  password : '123456'
+};
+
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ ReactiveFormsModule, FormsModule ],
-      declarations: [ LoginComponent ]
-    })
-    .compileComponents();
+      declarations: [LoginComponent],
+
+      imports: [ReactiveFormsModule, FormsModule],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -25,26 +40,31 @@ describe('LoginComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  function updateForm(email, password) {
-    console.log(component);
-    component.loginForm.controls['email'].setValue(email);
-    component.loginForm.controls['password'].setValue(password);
-  }
-
-  it('login component initial state', () => {
+  it('component initial state', () => {
     expect(component.loginForm.submitted).toBeFalsy();
     expect(component.loginForm).toBeDefined();
-    expect(component.loginForm.invalid).toBeFalsy();
   });
 
-  it('form should be valid now', () => {
-    const email    = 'ev@gmail.com';
-    const password = '123456';
-    console.log(component.loginForm);
-    component.loginForm.controls['email'].setValue(email);
-    component.loginForm.controls['password'].setValue(password);
+  it('should be true when onSubmit()', () => {
+    setTimeout(() => {
+      component.loginForm.setValue(validUser);
+      component.loginSubmit();
+      expect(component.loginForm.submitted).toBeTruthy();
+    }, 500);
+  });
 
-    // updateForm(email, password);
+  it('should be invalid login form when the user is blank', () => {
+    setTimeout(() => {
+      component.loginForm.setValue(invalidUser);
+      expect(component.loginForm.invalid).toBeTruthy();
+    }, 500);
+  });
+
+  it('should be valid login form when the user data is correct', () => {
+    setTimeout(() => {
+      component.loginForm.setValue(invalidUser);
+      expect(component.loginForm.valid).toBeTruthy();
+    }, 500);
   });
 
 });

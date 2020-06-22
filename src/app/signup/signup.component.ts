@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-signup',
@@ -9,6 +9,7 @@ export class SignupComponent implements OnInit {
 
   logoUrl           = 'assets/reachout-logo.png';
   mobNumberPattern  = '^((\\+91-?)|0)?[0-9]{10}$';
+  @ViewChild('regForm') regForm: NgForm;
   constructor() { }
 
   ngOnInit(): void {

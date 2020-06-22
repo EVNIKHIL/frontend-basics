@@ -18,11 +18,8 @@ describe('SignupComponent', () => {
         fixture.detectChanges();
     });
 
-    it('#it should create', () => {
+    it('#it should create 111', () => {
         expect(component).toBeTruthy();
     });
 
-    it('signup component initial stage', () => {
-        expect(component).toBeTruthy();
-    });
 });
