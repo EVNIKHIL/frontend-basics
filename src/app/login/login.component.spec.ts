@@ -25,9 +25,26 @@ describe('LoginComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('component initial state', () => {
+  function updateForm(email, password) {
     console.log(component);
-    expect(true).toBeFalsy();
+    component.loginForm.controls['email'].setValue(email);
+    component.loginForm.controls['password'].setValue(password);
+  }
+
+  it('login component initial state', () => {
+    expect(component.loginForm.submitted).toBeFalsy();
+    expect(component.loginForm).toBeDefined();
+    expect(component.loginForm.invalid).toBeFalsy();
+  });
+
+  it('form should be valid now', () => {
+    const email    = 'ev@gmail.com';
+    const password = '123456';
+    console.log(component.loginForm);
+    component.loginForm.controls['email'].setValue(email);
+    component.loginForm.controls['password'].setValue(password);
+
+    // updateForm(email, password);
   });
 
 });

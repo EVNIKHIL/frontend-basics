@@ -21,4 +21,8 @@ describe('SignupComponent', () => {
     it('#it should create', () => {
         expect(component).toBeTruthy();
     });
+
+    it('signup component initial stage', () => {
+        expect(component).toBeTruthy();
+    });
 });
