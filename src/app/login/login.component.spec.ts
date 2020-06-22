@@ -49,6 +49,7 @@ describe('LoginComponent', () => {
     setTimeout(() => {
       component.loginForm.setValue(validUser);
       component.loginSubmit();
+      console.log(component.loginForm.submitted);
       expect(component.loginForm.submitted).toBeTruthy();
     }, 500);
   });
@@ -56,7 +57,7 @@ describe('LoginComponent', () => {
   it('should be invalid login form when the user is blank', () => {
     setTimeout(() => {
       component.loginForm.setValue(invalidUser);
-      expect(component.loginForm.invalid).toBeTruthy();
+      expect(component.loginForm.valid).toBeTruthy();
     }, 500);
   });
 
